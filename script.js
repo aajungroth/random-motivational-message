@@ -36,5 +36,26 @@ const messagePart3 = [
     'you have limitless potential.',
 ];
 
+// Get a random number from 0 to n - 1
+const getRandomNumberInRange = (n) => {
+  return Math.floor(Math.random() * n);
+};
+
+// Creates a random message
+const getMessage = () => {
+    let message = '';
+    let messagePart1Index = getRandomNumberInRange(messagePart1.length);
+    let messagePart2Index = getRandomNumberInRange(messagePart2.length);
+    let messagePart3Index = getRandomNumberInRange(messagePart3.length);
+
+    message += messagePart1[messagePart1Index] + ' ' 
+    message += messagePart2[messagePart2Index] + ' '
+    message += messagePart3[messagePart3Index];
+
+    return message;
+};
+
 // Introduction message
-console.log('Motivational Message Incoming!');
+console.log('Motivational Message Incoming!\n');
+
+console.log(getMessage());
