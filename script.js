@@ -129,7 +129,34 @@ const getMessage = () => {
     return message;
 };
 
-// Introduction message
-console.log('Motivational Message Incoming!\n');
+// Create a space sperated list
+const getSeparatedList = (list, n) => {
+  let separatedList = '';
 
+  for (let i = 0; i < n; i++) {
+    let randomIndex = getRandomNumberInRange(list.length);
+
+    separatedList += list[randomIndex];
+
+    if (i < n - 1) {
+      separatedList += ' - ';
+    }
+  }
+
+  return separatedList;
+};
+
+// Introduction message
+console.log('\nMotivational Message Incoming!\n');
+
+// Motivational message
 console.log(getMessage());
+
+// Lucky fruit salad introduction mesage
+console.log('\nYour lucky fruit salad is:\n');
+
+// Lucky fruit salad message
+console.log(getSeparatedList(fruitList, 5));
+
+// Adds a new line
+console.log();
