@@ -129,7 +129,7 @@ const getMessage = () => {
     return message;
 };
 
-// Create a space sperated list
+// Create a sperated list
 const getSeparatedList = (list, n) => {
   let separatedList = '';
 
@@ -139,7 +139,7 @@ const getSeparatedList = (list, n) => {
     separatedList += list[randomIndex];
 
     if (i < n - 1) {
-      separatedList += ' - ';
+      separatedList += ' | ';
     }
   }
 
